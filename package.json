@@ -22,20 +22,15 @@
     "scripts": {
         "build": "virmator frontend build",
         "compile": "virmator compile",
-        "docs": "virmator docs",
         "format": "virmator format",
         "lint": "virmator lint fix",
-        "publish": "virmator publish npm run test:all",
         "start": "virmator frontend",
         "test": "virmator test web",
-        "test:all": "npm run compile && runstorm --names tests,spelling,format,docs,deps,lint \"npm run test:coverage\" \"npm run test:spelling\" \"npm run test:format\" \"npm run test:docs\" \"npm run test:deps\" \"npm run test:lint\"",
-        "test:coverage": "npm run test coverage",
+        "test:all": "npm run compile && runstorm --names tests,spelling,format,deps,lint \"npm run test\" \"npm run test:spelling\" \"npm run test:format\" \"npm run test:deps\" \"npm run test:lint\"",
         "test:deps": "virmator deps check",
-        "test:docs": "virmator docs check",
         "test:format": "virmator format check",
         "test:lint": "virmator lint",
-        "test:spelling": "virmator spellcheck",
-        "test:update": "npm test update"
+        "test:spelling": "virmator spellcheck"
     },
     "dependencies": {
         "@augment-vir/assert": "^32.6.0",
@@ -91,7 +86,6 @@
         "prettier-plugin-packagejson": "^3.0.2",
         "prettier-plugin-sort-json": "^4.2.0",
         "prettier-plugin-toml": "^3.0.2",
-        "typedoc": "^0.28.20",
         "typescript": "^6.0.3",
         "typescript-eslint": "^8.71.2",
         "virmator": "^14.38.0",
